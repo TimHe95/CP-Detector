@@ -1,0 +1,35 @@
+OTHERS
+RESOURCE buffer cache memory thread threads connection connections stack pool worker workers core cores processes
+AMOUNT size amount number
+IMPROVE improve improving improves improved benefit benefits help helps helping get$better gets$better speed$up speeds$up speeds faster improvements improvement higher better speedup optimum useful$for
+PERF_POS performance speed throughput bandwidth
+PERF_NEG latency time$it$takes CPU$overhead CPU$time CPU$usage CPU overhead overheads disk$I/O I/O warmup$process  responses$time
+TIME_CONSUMING statistics check checks checked generate generates autogenerates generated recalculate recalculates bloat parsing parse parses filter filters debug log logged logs logging collection collect collects monitor monitoring monitors profiled profiles profiler profiling profile lookups lookup counters track tracks tracking tracked instrument instrumentation activate verify buffer$allocations duplicate$pushes request$processing unnecessary$handshakes debugging validation filtering Overrides emulate
+SLOW time-consuming slow expensive
+COMPARE than compared$with
+CONSEQUENCE resulting$in results$in result$in cause causes caused leads$to lead$to induce induces make makes yields yield show thereby hence provide comes$at
+NON_PERF reliability integrity durability recoverable crash$recovery consistency safe safety compression$quality compression$rate compression$rate compression compression$ratio security encryption accurate accuracy fault$tolerance OpenSSL safest safer
+SIDE_EFFECT unrecoverable inconsistency consistent unsafe lose$data lose$transaction data$corruption
+TRADEOFF balance tradeoff at$the$cost$of trade-off level trades$off trade-offs algorithms algorithm compromise
+INC increase increases ascend ascend raise raised waste additional critical
+DEC decrease decreases descend descends drop drops degrade degrades affect affects affected impact impacts eliminates eliminate eliminated reduce reduces saves shorter penalty less costs use$little prune
+ENABLE enabled enables enable
+DISABLE disabled disables disable
+IMPL_TO_FUNC functionality statistics
+DECIDE decides decide control controls determine determines specify specifies specified configures configure describing describes
+CONFIGURATION configuration directive option setting
+FILE_DIRECTIVE file files directory path filename filenames locale
+NAME name names hostname host$name username class$name server$name username user$name account$name
+TIME_ZONE time$zone timezone timestamp timestamp
+ADDRESS address addresses ip$address email$address socket$address ip-address port port$number contact$address netmask
+CHARSET charset character$set character$sets
+VERSION version versions license licenses
+LANGUAGE language en_ZA es_US en_US fr-FR de-DE zh-CN it-IT ko-KR ja-JP
+PRIV privileges privilege
+PREFERENCE displays display icon icons case$sensitive case-sensitive stopword preference
+C_SELF CSELF
+C_OTHER COTHER
+V_DISABLE VDISABLE
+V_ENABLE VENABLE
+V_OTHER VOTHER
+OPTIMIE optimization optimizations caching preallocation connection$pooling optimizer optimize

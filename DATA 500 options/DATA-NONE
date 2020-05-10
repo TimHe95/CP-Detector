@@ -1,0 +1,100 @@
+character_set_database	The character set used by the default database.
+character_set_connection	The character set used for literals specified without a character set introducer and for number-to-string conversion. 
+character_set_client	The character set for statements that arrive from the client.
+character_set_filesystem	The file system character set.
+character_set_server	The servers default character set.
+lc_time_names	This variable specifies the locale that controls the language used to display day and month names and abbreviations. 
+log_timestamps	This variable controls the time zone of timestamps in messages written to the error log, and in general query log and slow query log messages written to files.
+lower_case_file_system	This variable describes the case sensitivity of file names on the file system where the data directory is located. OFF means file names are case-sensitive, ON means they are not case-sensitive.
+lower_case_table_names	If set to 0, table names are stored as specified and comparisons are case-sensitive. If set to 1, table names are stored in lowercase on disk and comparisons are not case sensitive. 
+innodb_ft_user_stopword_table	This option is used to specify your own INNODB FULLTEXT index stopword list on a specific table.
+basedir	The path to the MySQL installation base directory.
+datadir	The path to the MySQL server data directory.
+ft_stopword_file	The file from which to read the list of stopwords for full-text searches on MyISAM tables. The server looks for the file in the data directory unless an absolute path name is given to specify a different directory. 
+pid_file	The path name of the file in which the server writes its process ID.
+plugin_dir	The path name of the plugin directory.
+sha256_password_private_key_path	This variable is available if MySQL was compiled using OpenSSL (see Section 6.3.4, “SSL Library-Dependent Capabilities”). It's value is the path name of the RSA private key file for the PASSWORD authentication plugin.
+slow_query_log_file	The name of the slow query log file.
+ssl_ca	The path name of the Certificate Authority (CA) certificate file in PEM format.
+ssl_capath	The path name of the directory that contains trusted SSL Certificate Authority (CA) certificate files in PEM format.
+ssl_cert	The path name of the server SSL public key certificate file in PEM format.
+ssl_crlpath	The path of the directory that contains certificate revocation-list files in PEM format. 
+character_sets_dir	The directory where character sets are installed.
+lc_messages_dir	The directory where error messages are located.
+bind_address	The MySQL server listens on a single network socket for TCP/IP connections. This socket is bound to a single address, but it is possible for an address to map onto multiple network interfaces. 
+automatic_sp_privileges	When this variable has a value of 1 (the default), the server automatically grants the EXECUTE and ALTER ROUTINE privileges to the creator of a stored routine, if the user cannot already execute and alter or drop the routine. 
+system_time_zone	The server system time zone.
+sha256_password_proxy_users	This variable controls whether the PASSWORD built-in authentication plugin supports proxy users.
+log_timestamps	This variable controls the time zone of timestamps in messages written to the error log, and in general query log and slow query log messages written to files.
+time_zone	The current time zone. This variable is used to initialize the time zone for each client that connects.
+timestamp	Set the time for this client. This is used to get the original timestamp if you use the binary log to restore rows.
+tls_version	Which protocol versions the server permits for encrypted connections.
+protocol_version	The version of the client/server protocol used by the MySQL server.
+proxy_user	If the current client is a proxy for another user, this variable is the proxy user name. Otherwise, this variable is NULL. 
+version	The version number for the server. 
+HeartbeatAddress	The CSELF directive specifies the multicast address to which COTHER will send status information. This address will usually correspond to a configured COTHER on a frontend proxy system.
+HeartbeatListen	The CSELF directive specifies the multicast address on which the server will listen for status information from COTHER-enabled servers. This address will usually correspond to a configured COTHER on an origin server.
+Listen	ip addresses and ports that the server listens to.
+AddCharset	The CSELF directive maps the given filename extensions to the specified content charset (the Internet registered name for a given character encoding).
+AddDescription	This sets the description to display for a file, for FancyIndexing. File is a file extension, partial filename, wild-card expression or full filename for files to describe. String is enclosed in double quotes.
+LanguagePriority	The CSELF sets the precedence of language variants for the case where the client does not express a preference, when handling a Multiviews request.
+AddLanguage	The CSELF directive maps the given filename extension to the specified content language. 
+RemoveLanguage	The CSELF directive removes any language associations for files with the given extensions.
+AuthFormUsername	The CSELF directive specifies the name of an HTML field which, if present, will contain the username to be used to log in.
+lc_messages	The locale to use for error messages. The default is enUS (language).
+license	The type of license the server has.
+SuexecUserGroup	The CSELF directive allows you to specify a username and group for CGI programs to run as.
+SSIUndefinedEcho	This directive changes the string that COTHER displays when a variable is not set and "echoed".
+ServerAdmin	The CSELF sets the contact address that the server includes in any error messages it returns to the client.
+ServerAlias	The CSELF directive sets the alternate names for a host, for use with name-based virtual hosts. The ServerAlias may include wildcards, if appropriate.
+PidFile	The CSELF directive sets the file to which the server records the process ID of the daemon.
+MetaDir	Specifies the name of the directory in which Apache can find meta information files.
+AddAlt	Alternate text to display for a file, instead of an icon selected by filename
+AddIcon	This sets the icon to display next to a file ending in name for COTHER. 
+AddIconByType	Icon to display next to files selected by MIME content-type.
+DefaultIcon	The CSELF directive sets the icon to display for files when no specific icon is known, for COTHER. Url-path is a relative URL to the icon, or a fully qualified remote URL.
+DefaultLanguage	Defines a default language tag to be sent in the Content-Language header field for all resources in the current context that have not been assigned a language tag by some other means.
+basedir	Path to the MariaDB installation directory. Other paths are usually resolved relative to this base directory. 
+bind_address	By default, the MariaDB server listens for TCP/IP connections on a network socket bound to a single address, 0.0.0.0. You can specify an alternative when the server starts using this option; either a host name, an IPv4 or an IPv6 address. In Debian and Ubuntu, the default bind_address is 127.0.0.1, which binds the server to listen on localhost only. Has always been available as a mysqld option, from MariaDB 10.3.3 also available as a system variable. 
+character_sets_dir	Directory where the character sets are installed. 
+datadir	Directory where the data is stored. 
+disconnect_on_expired_password	When a user password has expired (see User Password Expiry), this variable controls how the server handles clients that are not aware of the sandbox mode. If enabled, the client is not permitted to connect, otherwise the server puts the client in a sandbox mode. 
+external_user	External user name set by the plugin used to authenticate the client.
+ft_stopword_file	File containing a list of stopwords for use in MyISAM full-text searches. Unless an absolute path is specified the file will be looked for in the data directory.
+general_log_file	Name of the general query log file. If this is not specified, the name is taken from the log-basename setting or from your system hostname with .log as a suffix. 
+hostname	When the server starts, this variable is set to the server host name. 
+ignore_db_dirs	Tells the server that this directory can never be a database.
+init_file	Name of a file containing SQL statements that will be executed by the server on startup. Each statement should be on a new line, and end with a semicolon.
+insert_id	Value to be used for the next statement inserting a new AUTO_INCREMENT value. 
+lc_messages_dir	This system variable can be specified either as the path to the directory storing the server's error message files or as the path to the directory storing the specific language's error message file.
+lc_time_names	The locale that determines the language used for the date and time functions DAYNAME(), MONTHNAME() and DATE_FORMAT(). Locale names are language and region subtags, for example en_ZA or es_US. The default is always en_US regardless of the system's locale setting. See server locale for a full list of supported locales. 
+pid_file	Full path of the process ID file.
+plugin_dir	Path to the plugin directory. For security reasons, either make sure this directory can only be read by the server, or set COTHER. 
+port	Port to listen for TCP/IP connections. If set to 0, will default to, in order of preference, the MYSQL_TCP_PORT environment variable, /etc/services, built-in default (3306). 
+proxy_user	Set to the proxy user account name if the current client is a proxy, else NULL.
+slow_query_log_file	Name of the slow query log file.
+socket	On Unix-like systems, this is the name of the socket file used for local client connections, by default /tmp/mysql.sock, often changed by the distribution, for example /var/lib/mysql/mysql.sock. On Windows, this is the name of the named pipe used for local client connections, by default MySQL. On Windows, this is not case-sensitive. 
+tmpdir	Directory for storing temporary tables and files. 
+wsrep_data_home_dir	Directory where wsrep provider will store its internal files.
+handlersocket_address	Specify the IP address to bind to. 
+handlersocket_port	Specify the port to bind to for reads.
+innodb_data_home_dir	Directory path for all InnoDB data files in the shared tablespace.
+extra_port	Port number to use for TCP connections in a one-thread-per-connection manner.
+announce_port	Set the port where announce registration messages will be sent.
+port	The TCP/IP port number on which this server waits for a shutdown command. Set to -1 to disable the shutdown port. Note : Disabling the shutdown port works well when Tomcat is started using Apache Commons Daemon (running as a service on Windows or with jsvc on un*xes). It cannot be used when running Tomcat with the standard shell scripts though, as it will prevent shutdown.bat|.sh and catalina.bat|.sh from stopping it gracefully.
+adaptation_masterx_shared_names	For each master transaction (i.e., the HTTP request and response sequence, including all related ICAP and eCAP exchanges), Squid maintains a table of metadata. The table entries are (name, value) pairs shared among eCAP and ICAP exchanges. The table is destroyed with the master transaction.
+adaptation_send_username	This sends authenticated HTTP client username (if available) to the adaptation service.
+announce_file	The contents of this file will be included in the announce registration messages.
+dns_defnames	Normally the RES_DEFNAMES resolver option is disabled (see res_init(3)). This prevents caches in a hierarchy from interpreting single-component hostnames locally. To allow Squid to handle single-component names, enable this option.
+dns_testnames	The DNS tests exit as soon as the first site is successfully looked up.This test can be disabled with the -D command line option.
+icap_send_client_username	This sends authenticated HTTP client username (if available) to the ICAP service. The username value is encoded based on the COTHER option and is sent using the header specified by the COTHER option.
+netdb_filename	Where Squid stores it's netdb journal. When enabled this journal preserves netdb state between restarts.
+pid_filename	A filename to write the process-id to.
+unique_hostname	If you want to have multiple machines with the same hostname you must give each machine a different unique hostname so forwarding loops can be detected.
+visible_hostname	If you want to present a special hostname in error messages, etc, define this. Otherwise, the return value of gethostname() will be used. If you have multiple caches in a cluster and get errors about IP-forwarding you must set them to have individual names with this setting.
+className	Java class name of the implementation to use. This class must implement the org.apache.catalina.Server interface. If no class name is specified, the standard implementation will be used.
+proxyName	If this Connector is being used in a proxy configuration, configure this attribute to specify the server name to be returned for calls to request.getServerName(). 
+client_netmask	A netmask for client addresses in log files and cachemgr output.
+htcp_port	The port number where Squid sends and receives HTCP queries to and from neighbor caches. To turn it VENABLE you want to set it to 4827.
+https_port	The socket address where Squid will listen for client requests made over TLS or SSL connections.
+icp_port	The port number where Squid sends and receives ICP queries to and from neighbor caches.

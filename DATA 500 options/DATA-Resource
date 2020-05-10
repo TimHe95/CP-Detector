@@ -1,0 +1,143 @@
+bulk_insert_buffer_size	Size in bytes of the per-thread cache tree used to speed up bulk inserts into MyISAM and Aria tables. A value of 0 disables the cache tree.
+audit_log_buffer_size	This variable controls the size of that buffer, in bytes. This variable controls the size of that buffer, in bytes.
+audit_log_read_buffer_size	The buffer size for reading from the audit log file, in bytes. 
+clone_buffer_size	Defines the size of the intermediate buffer used when transferring data during a local cloning operation.
+innodb_buffer_pool_size	The size in bytes of the buffer pool, the memory area where INNODB caches table and index data.
+innodb_change_buffer_max_size	Maximum size for the INNODB change buffer, as a percentage of the total size of the buffer pool.
+myisam_sort_buffer_size	The size of the buffer that is allocated when sorting MyISAM indexes during a REPAIR TABLE or when creating indexes with CREATE INDEX or ALTER TABLE.
+innodb_sort_buffer_size	Specifies the size of sort buffers used to sort data during creation of an INNODB index. 
+join_buffer_size	The minimum size of the buffer that is used for plain index scans, range index scans, and joins that do not use indexes and thus perform full table scans. 
+key_buffer_size	key_buffer_size is the size of the buffer used for index blocks.
+ndb_eventbuffer_max_alloc	Sets the maximum amount memory (in bytes) that can be allocated for buffering events by the NDB API.
+preload_buffer_size	The size of the buffer that is allocated when preloading indexes.
+read_buffer_size	Each thread that does a sequential scan for a MyISAM table allocates a buffer of this size (in bytes) for each table it scans.
+read_rnd_buffer_size	This variable is used for reads from MyISAM tables, and, for any storage engine, for Multi-Range Read optimization. When reading rows from a MyISAM table in sorted order following a key-sorting operation, the rows are read through this buffer to avoid disk seeks. Setting the variable to a large value can improve ORDER BY performance by a lot.
+sort_buffer_size	Each session that must perform a sort allocates a buffer of this size.
+thread_pool_size	The number of thread groups in the thread pool. 
+myisam_max_sort_file_size	The maximum size of the temporary file that MySQL is permitted to use while recreating a MyISAM index. If the file size would be larger than this value, the index is created using the key cache instead, which is slower. If MyISAM index files exceed this size and disk space is available, increasing the value may help performance.
+binlog_cache_size	The size of the memory buffer to hold changes to the binary log during a transaction. If you often use large transactions, you can increase this cache size to get better performance by reducing or eliminating the need to write to temporary files. 
+binlog_stmt_cache_size	The size of the memory buffer for the binary log to hold nontransactional statements issued during a transaction. If you often use large nontransactional statements during transactions, you can increase this cache size to get better performance by reducing or eliminating the need to write to temporary files.
+host_cache_size	This variable controls the size of the host cache, as well as the size of the Performance Schema host_cache table that exposes the cache contents.
+max_connections	The maximum permitted number of simultaneous client connections.
+innodb_ft_total_cache_size	The total memory allocated, in bytes, for the INNODB full-text search index cache for all tables.
+innodb_ft_cache_size	The memory allocated, in bytes, for the INNODB FULLTEXT search index cache, which holds a parsed document in memory while creating an INNODB FULLTEXT index.
+thread_stack	The stack size for each thread. The default is large enough for normal operation. If the thread stack size is too small, it limits the complexity of the SQL statements that the server can handle, the recursion depth of stored procedures, and other memory-consuming actions.
+transaction_prealloc_size	There is a pertransaction memory pool from which various transaction-related allocations take memory. The initial size of the pool in bytes is CSELF.
+innodb_commit_concurrency	The number of threads that can commit at the same time. A value of 0 (the default) permits any number of transactions to commit simultaneously.
+innodb_concurrency_tickets	Determines the number of threads that can enter INNODB concurrently.
+innodb_page_cleaners	The number of page cleaner threads that flush dirty pages from buffer pool instances. 
+innodb_parallel_read_threads	Defines the number of threads that can be used for parallel clustered index reads. Parallel read threads can improve CHECK TABLE performance. 
+innodb_read_io_threads	The number of I/O threads for read operations in INNODB. If you have a high end I/O subsystem and you see more than 64 × INNODB_read_io_threads pending read requests in SHOWENGINE INNODB STATUS output, you might improve performance by increasing the value of INNODB_read_io_threads.
+innodb_thread_concurrency	INNODB tries to keep the number of operating system threads concurrently inside INNODB less than or equal to the limit given by this variable. Once the number of threads reaches this limit, additional threads are placed into a wait state within a First In, First Out (FIFO) queue for execution.
+innodb_write_io_threads	The number of I/O threads for write operations in INNODB. 
+AuthDigestShmemSize	The CSELF directive defines the amount of shared memory, that will be allocated at the server startup for keeping track of clients.
+BufferSize	The CSELF directive specifies the amount of data in bytes that will be buffered before being read from or written to each request. 
+DeflateMemLevel	The CSELF directive specifies how much memory should be used by zlib for compression (a value between 1 and 9).
+H2MaxWorkers	This directive sets the maximum number of worker threads to spawn per child process for HTTP2 processing.
+H2MinWorkers	This directive sets the minimum number of worker threads to spawn per child process for HTTP2 processing. 
+H2StreamMaxMemSize	This directive sets the maximum number of outgoing data bytes buffered in memory for an active streams. This memory is not allocated per stream as such. Allocations are counted against this limit when they are about to be done. Stream processing freezes when the limit has been reached and will only continue when buffered data has been sent out to the client.
+HeartbeatMaxServers	The HeartbeatMaxServers directive specifies the maximum number of servers that will be sending requests to this monitor server. It is used to control the size of the shared memory allocated to store the heartbeat info when mod_slotmem_shm is in use.
+ISAPIReadAheadBuffer	Defines the maximum size of the Read Ahead Buffer sent to ISAPI extensions when they are initially invoked. 
+LDAPCacheEntries	Specifies the maximum size of the primary LDAP cache. This cache contains successful search/binds. Set it to 0 to turn off search/bind caching.
+LDAPOpCacheEntries	This specifies the number of entries mod_ldap will use to cache LDAP compare operations. The default is 1024 entries. Setting it to 0 disables operation caching.
+LDAPSharedCacheSize	Specifies the number of bytes to allocate for the shared memory cache. The default is 500kb. If set to 0, shared memory caching will not be used and every HTTPD process will create its own cache.
+MaxKeepAliveRequests	The MaxKeepAliveRequests directive limits the number of requests allowed per connection when KeepAlive is on. If it is set to 0, unlimited requests will be allowed. We recommend that this setting be kept to a high value for maximum server performance.
+MaxRequestWorkers	Maximum number of connections that will be processed simultaneously. The MaxRequestWorkers directive sets the limit on the number of simultaneous requests that will be served. Any connection attempts over the MaxRequestWorkers limit will normally be queued, up to a number based on the ListenBacklog directive. Once a child process is freed at the end of a different request, the connection will then be serviced.
+ThreadStackSize	The size in bytes of the stack used by threads handling client connections
+ThreadsPerChild	This directive sets the number of threads created by each child process. The child creates these threads at startup and never creates more. If using an MPM like mpm_winnt, where there is only one child process, this number should be high enough to handle the entire load of the server. If using an MPM like worker, where there are multiple child processes, the total number of threads should be high enough to handle the common load on the server.
+StartThreads	Number of threads created on startup. As the number of threads is dynamically controlled depending on the load, there is usually little reason to adjust this parameter.
+StartServers	The StartServers directive sets the number of child server processes created on startup. As the number of processes is dynamically controlled depending on the load, there is usually little reason to adjust this parameter.
+SendBufferSize	Sets the server's TCP send buffer size to the number of bytes specified. 
+SSLRenegBufferSize	If an SSL renegotiation is required in perlocation context, for example, any use of SSLVerifyClient in a Directory or Location block, then mod_ssl must buffer any HTTP request body into memory until the new SSL handshake can be performed. This directive can be used to set the amount of memory that will be used for this buffer.
+ScriptLogBuffer	The size of any PUT or POST entity body that is logged to the file is limited, to prevent the log file growing too big too quickly if large bodies are being received. By default, up to 1024 bytes are logged, but this can be changed with this directive.
+RLimitMEM	Takes 1 or 2 parameters. The first parameter sets the soft resource limit for all processes and the second parameter sets the maximum resource limit. Either parameter can be a number, or max to indicate to the server that the limit should be set to the maximum allowed by the operating system configuration. Raising the maximum resource limit requires that the server is running as root or in the initial startup phase.
+RLimitCPU	Takes 1 or 2 parameters. The first parameter sets the soft resource limit for all processes and the second parameter sets the maximum resource limit. Either parameter can be a number, or max to indicate to the server that the limit should be set to the maximum allowed by the operating system configuration. Raising the maximum resource limit requires that the server is running as root or in the initial startup phase.
+ReceiveBufferSize	The server will set the TCP receive buffer size to the number of bytes specified.
+ProxyReceiveBufferSize	The CSELF directive specifies an explicit (TCP/IP) network buffer size for proxied HTTP and FTP connections, for increased throughput. It has to be greater than 512 or set to 0 to indicate that the system's default buffer size should be used.
+ProxyIOBufferSize	The CSELF directive adjusts the size of the internal buffer which is used as a scratchpad for the data between input and output. The size must be at least 512. In almost every case, there's no reason to change that value.
+ProxyHTMLBufSize	In order to parse non HTML content (stylesheets and scripts) embedded in HTML documents, mod_proxy_html has to read the entire script or stylesheet into a buffer. This buffer will be expanded as necessary to hold the largest script or stylesheet in a page, in increments of bytes as set by this directive. The default is 8192, and will work well for almost all pages. However, if you know you're proxying pages containing stylesheets and scripts bigger than 8K (that is, for a single script or stylesheet, NOT in total), it will be more efficient to set a larger buffer size and avoid the need to resize the buffer dynamically during a request.
+ProxyHCTPsize	Sets the total server-wide size of the threadpool used for the health check workers
+CacheSocacheReadSize	The CSELF directive sets the minimum amount of data, in bytes, to be read from the backend before the data is sent to the client. The default of zero causes all data read of any size to be passed downstream to the client immediately as it arrives. Setting this to a higher value causes the disk cache to buffer at least this amount before sending the result to the client. This can improve performance when caching content from a slow reverse proxy.
+bulk_insert_buffer_size	Size in bytes of the per-thread cache tree used to speed up bulk inserts into MyISAM and Aria tables. A value of 0 disables the cache tree.
+net.maxIncomingConnections	The maximum number of simultaneous connections that mongos or mongod will accept. This setting has no effect if it is higher than your operating system’s configured maximum connection tracking threshold.
+storage.wiredTiger.engineConfig.cacheSizeGB	Defines the maximum size of the internal cache that WIREDTIGER will use for all data. The memory consumed by an index build is separate from the WIREDTIGER cache memory.
+storage.inMemory.engineConfig.inMemorySizeGB	Maximum amount of memory to allocate for in-memory storage engine data, including indexes, oplog if the mongod is part of replica set, replica set or sharded cluster metadata, etc.
+ldapConnectionPoolMaximumConnectionsPerHost	The maximum number of connections to keep open to each LDAP server.
+ldapConnectionPoolMinimumConnectionsPerHost	The minimum number of connections to keep open to each LDAP server.
+ldapConnectionPoolMaximumConnectionsInProgressPerHost	The maximum number of in-progress connect operations to each LDAP server.
+connPoolMaxShardedConnsPerHost	Sets the maximum size of the legacy connection pools for communication to the shards.
+connPoolMaxShardedInUseConnsPerHost	Sets the maximum number of in-use connections at any given time for the legacy sharded cluster connection pools.
+connPoolMaxConnsPerHost	Sets the maximum size of the legacy connection pools for outgoing connections to other mongod instances in the global connection pool. 
+connPoolMaxInUseConnsPerHost	Sets the maximum number of in-use connections at any given time for for outgoing connections to other mongod instances in the legacy global connection pool.
+maxSessions	The maximum number of sessions that can be cached.
+replWriterThreadCount	Number of threads to use to apply replicated operations in parallel.
+ShardingTaskExecutorPoolMaxConnecting	Maximum number of simultaneous initiating connections (including pending connections in setup/refresh state) each TaskExecutor connection pool can have to a mongod instance. 
+ShardingTaskExecutorPoolMaxSize	Maximum number of outbound connections each TaskExecutor connection pool can open to any given mongod instance.
+taskExecutorPoolSize	The number of Task Executor connection pools to use for a given mongos.
+wiredTigerConcurrentWriteTransactions	Specify the maximum number of concurrent write transactions allowed into the WIREDTIGER storage engine.
+max_connections	Determines the maximum number of concurrent connections to the database server.
+superuser_reserved_connections	Determines the number of connection slots that are reserved for connections by PostgreSQL superusers. At most max_connections connections can ever be active simultaneously. Whenever the number of active concurrent connections is at least max_connections minus superuser_reserved_connections, new connections will be accepted only for superusers, and no new replication connections will be accepted.
+shared_buffers	Sets the amount of memory the database server uses for shared memory buffers. This setting must be at least 128 kilobytes. However, settings significantly higher than the minimum are usually needed for good performance.
+temp_buffers	Sets the maximum amount of memory used for temporary buffers within each database session. The cost of setting a large value in sessions that do not actually need many temporary buffers is only a buffer descriptor, or about 64 bytes, per increment in temp_buffers.
+work_mem	Sets the maximum amount of memory to be used by a query operation (such as a sort or hash table) before writing to temporary disk files.
+maintenance_work_mem	Specifies the maximum amount of memory to be used by maintenance operations. Larger settings might improve performance for vacuuming and for restoring database dumps.
+autovacuum_work_mem	Specifies the maximum amount of memory to be used by each autovacuum worker process.
+effective_io_concurrency	Sets the number of concurrent disk I/O operations that PostgreSQL expects can be executed simultaneously. Raising this value will increase the number of I/O operations that any individual PostgreSQL session attempts to initiate in parallel.
+max_worker_processes	Sets the maximum number of background processes that the system can support.
+max_parallel_workers_per_gather	Sets the maximum number of workers that can be started by a single Gather or Gather Merge node.
+max_parallel_maintenance_workers	Sets the maximum number of parallel workers that can be started by a single utility command.
+max_parallel_workers	Sets the maximum number of workers that the system can support for parallel operations.
+wal_buffers	The amount of shared memory used for WAL data that has not yet been written to disk. However, setting this value to at least a few megabytes can improve write performance on a busy server where many clients are committing at once.
+max_wal_senders	Specifies the maximum number of concurrent connections from standby servers or streaming base backup clients
+max_logical_replication_workers	Specifies maximum number of logical replication workers. This includes both apply workers and table synchronization workers.
+max_sync_workers_per_subscription	Maximum number of synchronization workers per subscription. This parameter controls the amount of parallelism of the initial data copy during the subscription initialization or when new tables are added.
+geqo_pool_size	Controls the pool size used by GEQO, that is the number of individuals in the genetic population. 
+track_activity_query_size	Specifies the amount of memory reserved to store the text of the currently executing command for each active session, for the pg_stat_activity_query field.
+autovacuum_max_workers	Specifies the maximum number of autovacuum processes (other than the autovacuum launcher) that may be running at any one time.
+back_log	This setting determines the number of outstanding connection requests MariaDB can have, or the size of the listen queue for incoming TCP/IP requests. 
+join_buffer_size	Minimum size in bytes of the buffer used for queries that cannot use an index, and instead perform a full table scan. Increase to get faster full joins when adding indexes is not possible, although be aware of memory issues, since joins will always allocate the minimum size. Best left low globally and set high in sessions that require large full joins.
+join_buffer_space_limit	Maximum size in bytes of the query buffer, By default 1024*128*10. See Block-based join algorithms. 
+large_page_size	Indicates the size of memory page if large page support (Linux only) is enabled. The page size is determined from the Hugepagesize setting in /proc/meminfo. See large_pages. Deprecated and unused in MariaDB 10.5.3 since multiple page size support was added. 
+max_connections	The maximum number of simultaneous client connections.
+max_delayed_threads	Limits to the number of INSERT DELAYED threads.
+max_session_mem_used	Amount of memory a single user session is allowed to allocate. This limits the value of the session variable MEM_USED. 
+max_user_connections	Maximum simultaneous connections permitted for each user account.
+metadata_locks_cache_size	Size of the metadata locks cache, used for reducing the need to create and destroy synchronization objects. It is particularly helpful on systems where this process is inefficient, such as Windows XP. 
+mrr_buffer_size	Size of buffer to use when using multi-range read with range access.
+net_buffer_length	The starting size, in bytes, for the connection and thread buffers for each client thread. The size can grow to COTHER. This variable's session value is read-only. Can be set to the expected length of client statements if memory is a limitation. 
+optimizer_trace_max_mem_size	Limits the memory used while tracing a query by specifying the maximum allowed cumulated size, in bytes, of stored optimizer traces. 
+preload_buffer_size	Size in bytes of the buffer allocated when indexes are preloaded.
+query_cache_min_res_unit	Minimum size in bytes of the blocks allocated for query cache results. 
+query_cache_size	Size in bytes available to the query cache.
+read_buffer_size	Each thread performing a sequential scan (for MyISAM, Aria and MERGE tables) allocates a buffer of this size in bytes for each table scanned. Increase if you perform many sequential scans. If not in a multiple of 4KB, will be rounded down to the nearest multiple. Also used in ORDER BY's for caching indexes in a temporary file (not temporary table), for caching results of nested queries, for bulk inserts into partitions, and to determine the memory block size of MEMORY tables.
+read_rnd_buffer_size	Size in bytes of the buffer used when reading rows from a MyISAM table in sorted order after a key sort. Larger values improve ORDER BY performance, although rather increase the size by SESSION where the need arises to avoid excessive memory use. 
+rowid_merge_buff_size	The maximum size in bytes of the memory available to the Rowid-merge strategy.
+sort_buffer_size	Each session performing a sort allocates a buffer with this amount of memory.
+thread_cache_size	Number of threads server caches for re-use. 
+thread_stack	Stack size for each thread. If set too small, limits recursion depth of stored procedures and complexity of SQL statements the server can handle in memory.
+transaction_alloc_block_size	Size in bytes to increase the memory pool available to each transaction when the available pool is not large enough.
+transaction_prealloc_size	Initial size of a memory pool available to each transaction for various memory allocations.
+aria_pagecache_buffer_size	The size of the buffer used for index blocks for Aria tables. Increase this to get better index handling (for all reads and multiple writes) to as much as you can afford. 
+aria_repair_threads	Number of threads to use when repairing Aria tables. The value of 1 disables parallel repair.
+aria_sort_buffer_size	The buffer that is allocated when sorting the index when doing a REPAIR or when creating indexes with CREATEINDEX or ALTERTABLE.
+connect_work_size	Size of the CONNECT work area used for memory allocation.
+client_request_buffer_max_size	This specifies the maximum buffer size of a client request. It prevents squid eating too much memory when somebody uploads a large file.
+dns_children	The maximum number of processes spawn to service DNS name lookups. If you limit it too few Squid will have to wait for them to process a backlog of requests, slowing it down. If you allow too many they will use RAM and other system resources noticably. The maximum this may be safely set to is 32.
+location_rewrite_children	The number of location rewriting processes to spawn. If you start too few Squid will have to wait for them to process a backlog of URLs, slowing it down. If you start too many they will use RAM and other system resources.
+maximum_object_size_in_memory	Objects greater than this size will not be attempted to kept in the memory cache. This should be set high enough to keep objects accessed frequently in memory to improve performance whilst low enough to keep larger objects from hoarding cache_mem.
+store_id_children	Specifies the maximum number of StoreID helper processes that Squid may spawn and several related options. Using too few of these helper processes creates request queues. Using too many helpers wastes your system resources.
+url_rewrite_children	Specifies the maximum number of redirector processes that Squid may spawn and several related options. Using too few of these helper processes creates request queues. Using too many helpers wastes your system resources.
+socket.txBufSize	The socket send buffer size in bytes.
+socket.appReadBufSize	Each connection that is opened up in Tomcat get associated with a read buffer. This attribute controls the size of this buffer. By default this read buffer is sized at 8192 bytes. For lower concurrency, you can increase this to buffer more data. For an extreme amount of keep alive connections, decrease this number or increase your heap size.
+socket.appWriteBufSize	Each connection that is opened up in Tomcat get associated with a write buffer. This attribute controls the size of this buffer. By default this write buffer is sized at 8192 bytes. For low concurrency you can increase this to buffer more response data. For an extreme amount of keep alive connections, decrease this number or increase your heap size. The default value here is pretty low, you should up it if you are not dealing with tens of thousands concurrent connections.
+pollerThreadCount	Number of threads used to poll kept alive connections.
+acceptCount	The maximum queue length for incoming connection requests when all possible request processing threads are in use. Any requests received when the queue is full will be refused. The default value is 100.
+acceptorThreadCount	The number of threads to be used to accept connections.
+maxLogMessageBufferSize	Log message buffers are usually recycled and re-used. To prevent excessive memory usage, if a buffer grows beyond this size it will be discarded. The default is 256 characters. This should be set to larger than the typical access log message size.
+utilityThreads	The number of threads this Service will use for various utility tasks, including recurring ones. The special value of 0 will result in the value of Runtime.getRuntime().availableProcessors() being used. Negative values will result in Runtime.getRuntime().availableProcessors() + value being used unless this is less than 1 in which case 1 thread will be used. The default value is 1. 
+rxBufSize	The receive buffer size on the socket. Default value is 25188 bytes. 
+txBufSize	The send buffer size on the socket. Default value is 43800 bytes. 
+udpRxBufSize	The receive buffer size on the datagram socket. Default value is 25188 bytes.
+udpTxBufSize	The send buffer size on the datagram socket. Default value is 43800 bytes.
+hash-max-ziplist-value	Hashes are encoded using a memory efficient data structure when they have a small number of entries, and the biggest entry does not exceed a given threshold. These thresholds can be configured using the following directives.
+sslcrtvalidator_children	Specifies the maximum number of certificate validation processes that Squid may spawn and several related options.
